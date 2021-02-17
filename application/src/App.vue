@@ -32,13 +32,16 @@ export default {
       console.log(typeof(console.log(this.catetoB)))
     },
     sendData: function() {
-      let url = "http://localhost:9090/calculador.php";
+      // let url = "http://localhost:9090/calculador.php";
+      // let alternativeUrl = "http://calculator-hipotenusa.infinityfreeapp.com/calculador.php";
+      let directUrl = "calculador.php"
+
       let formData = {
         catetoA: this.catetoA,
         catetoB: this.catetoB,
       }
       
-      this.$http.post(url, formData).then(
+      this.$http.post(directUrl, formData).then(
         (response) => {
           let trueResponse = response.data;
           // let responseConsole = typeof(response.data);
